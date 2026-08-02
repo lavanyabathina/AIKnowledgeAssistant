@@ -1,0 +1,43 @@
+# =====================================================
+# AI Knowledge Assistant - Application Configuration
+# =====================================================
+
+application:
+
+  # Generate dataset from configured sources
+  dataset_generation:
+    enabled: false
+
+  # Delete existing vector database before indexing
+  rebuild_vector_db:
+    enabled: false
+
+  # Create embeddings and store in vector database  
+  vector_indexing:
+    enabled: false
+
+  # Query vector database using LLM
+  chat:
+    enabled: true
+
+chunking:
+  chunk_size: 1000
+  chunk_overlap: 200
+
+embedding:
+  provider: huggingface
+  model: sentence-transformers/all-MiniLM-L6-v2
+  batch_size: 32
+
+vector_db:
+  type: chroma
+  path: ./vectorstore/chroma_db
+  collection: knowledge_base
+
+retrieval:
+  top_k: 5
+
+llm:
+  provider: gemini
+  model: gemini-3.6-flash
+  temperature: 0

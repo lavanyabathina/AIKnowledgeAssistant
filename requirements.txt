@@ -1,0 +1,12 @@
+#Use pip install -r requirements.txt
+crawl4ai
+langchain
+langchain-community
+langchain-text-splitters
+langchain-huggingface  
+sentence-transformers
+chromadb
+langchain-chroma
+langchain-google-genai
+langchain-core
+

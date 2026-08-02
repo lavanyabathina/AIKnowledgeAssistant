@@ -1,0 +1,22 @@
+datasets:
+  - name: java
+    type: web
+    path: https://docs.oracle.com/en/java/javase/25/docs/api/
+  
+  - name: python
+    type: local
+    path: ./localData/pythondocs
+
+source_directory: ./sources
+
+web_source_directory: ./sources/web
+
+local_source_directory: ./sources/local
+
+output_directory: ./dataset
+
+max_depth: 3
+
+max_pages: 300
+
+output: markdown

@@ -1,0 +1,21 @@
+#environment file
+.env
+
+#chroma_db
+vectorstore/chroma_db
+
+#localData
+localData
+
+#sources
+
+sources/web/java
+sources/web/playwright
+sources/web/selenium
+
+
+
+
+
+
+
