@@ -36,6 +36,9 @@ vector_db:
 
 retrieval:
   top_k: 5
+  type: hybrid
+  hybrid_candidate_k: 20
+  hybrid_weights: [0.6, 0.4]
 
 llm:
   provider: gemini

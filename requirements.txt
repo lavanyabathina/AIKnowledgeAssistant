@@ -1,4 +1,4 @@
-#Use pip install -r requirements.txt
+asyncio
 crawl4ai
 langchain
 langchain-community
@@ -9,4 +9,4 @@ chromadb
 langchain-chroma
 langchain-google-genai
 langchain-core
-
+pyyaml
