@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "category": "Java Collections",
+    "question": "What is HashMap in Java and what are its key methods?",
+    "expected_output": "HashMap is a class in the java.util package that implements a hash table based map. It is part of the java.base module and provides key-value pair storage. Some of its key methods include: put(K, V) for adding entries, get(Object) for retrieving values, remove(Object) for deleting entries, containsKey(Object) for checking key existence, keySet() for getting all keys, values() for getting all values, and entrySet() for getting key-value pairs. HashMap supports null keys and values."
+  },
+  {
+    "id": 2,
+    "category": "Java Threading",
+    "question": "What are the different ways to create threads in Java and what are the priority levels?",
+    "expected_output": "In Java, threads can be created in multiple ways, including extending the Thread class or implementing the Runnable interface. Java supports both platform threads and virtual threads (new in Java 25). Thread priority levels in Java are defined by constants: MIN_PRIORITY (1), NORM_PRIORITY (5), and MAX_PRIORITY (10). Threads can be created with various constructors including Thread(), Thread(Runnable), Thread(String), and Thread(ThreadGroup, Runnable, String, long). Methods like currentThread() return the current thread, and yield() allows a thread to voluntarily give up its time slice."
+  },
+  {
+    "id": 3,
+    "category": "Python Basics",
+    "question": "What are loops in Python and how are they used?",
+    "expected_output": "Python loops are used to execute a block of code multiple times. There are two main types of loops in Python: for loops and while loops. For loops are used to iterate over sequences like lists, tuples, and strings. While loops execute as long as a condition is true. Loops help with iterating through data structures, automating repetitive tasks, and processing multiple elements efficiently. Python also supports loop control statements like break (to exit a loop) and continue (to skip to the next iteration)."
+  }
+]

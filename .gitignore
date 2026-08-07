@@ -16,7 +16,7 @@ sources/web/selenium
 #Python cache
 __pycache__/
 
-
+.deepeval/
 
 
 

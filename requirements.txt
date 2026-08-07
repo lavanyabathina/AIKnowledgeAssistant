@@ -9,4 +9,14 @@ chromadb
 langchain-chroma
 langchain-google-genai
 langchain-core
+playwright
+deepeval
+pypdf
+langchain-groq
+#DeepEval is trying to use its test run cache, but the cache initialization failed because the Windows file locking dependency is missing.
+portalocker
+pywin32
+langchain-anthropic
+
+
 

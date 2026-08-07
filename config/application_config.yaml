@@ -38,6 +38,17 @@ retrieval:
   top_k: 5
 
 llm:
-  provider: gemini
-  model: gemini-3.6-flash
+  #provider: gemini
+  #model: gemini-3.6-flash
+  #temperature: 0
+  provider: claude
+  model: claude-sonnet-4-6
+  temperature: 0
+
+deepeval_judgellm:
+  #provider: gemini
+  #model: gemini-3.6-flash
+  #temperature: 0
+  provider: claude
+  model: claude-sonnet-4-6
   temperature: 0

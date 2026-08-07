@@ -16,7 +16,7 @@ def generate_embeddings(chunks: List[Document], embedding_model):
 
     texts = [chunk.page_content for chunk in chunks]
 
-    batch_size = 100
+    batch_size = 500
     embedded_chunks = []
 
     start = time.time()

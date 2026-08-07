@@ -70,9 +70,9 @@ def start_chat(application_config):
 
 
 #This method can be used to check top#k chunks retrieved
-def invoke_retriever(application_config):
+def invoke_retriever_to_get_context(application_config,question):
 
-    print("Started Chat.")
+    print("Started Retriever.")
     embedding_model = get_embedding_model()
     print("Getting retriever.")
 
@@ -80,13 +80,14 @@ def invoke_retriever(application_config):
         application_config,
         embedding_model
     )
-    question="What is Test fixtures in playwright?"
+    #question="What is Test fixtures in playwright?"
     docs = retriever.invoke(
         question
     )
 
     print("Number of documents retrieved:", len(docs))
     print("Retrieved docs:")
+    print("*******************************************")
     for i, doc in enumerate(docs):
 
         print("=" * 80)
@@ -97,4 +98,41 @@ def invoke_retriever(application_config):
 
         print("\nContent:")
         print(doc.page_content[:500])
+    return docs
 
+
+def invoke_retriever_to_get_context_pagecontent_list(application_config,question):
+
+    print("Started Retriever.")
+    embedding_model = get_embedding_model()
+    print("Getting retriever.")
+
+    retriever = get_retriever(
+        application_config,
+        embedding_model
+    )
+    #question="What is Test fixtures in playwright?"
+    docs = retriever.invoke(
+        question
+    )
+
+    print("Number of documents retrieved:", len(docs))
+    print("Retrieved docs:")
+    print("*******************************************")
+    for i, doc in enumerate(docs):
+
+        print("=" * 80)
+        print(f"Document {i + 1}")
+
+        print("\nMetadata:")
+        print(doc.metadata)
+
+        print("\nContent:")
+        print(doc.page_content[:500])
+  # For DeepEval
+    retrieval_context = [
+        doc.page_content
+        for doc in docs
+    ]
+
+    return retrieval_context
