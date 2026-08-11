@@ -49,8 +49,10 @@ GROQ_API_KEY=your_groq_api_key
 
 ### Step 1: Clone or Download the Project
 ```bash
-cd c:\Users\Admin\Desktop\Lavanya\AILearning\AIKnowledgeAssistant
+cd /path/to/AIKnowledgeAssistant
 ```
+
+Replace `/path/to/AIKnowledgeAssistant` with the actual path where you cloned or downloaded the project.
 
 ### Step 2: Create a Virtual Environment (Recommended)
 ```bash
