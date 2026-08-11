@@ -35,7 +35,7 @@ vector_db:
   collection: knowledge_base
 
 retrieval:
-  top_k: 5
+  top_k: 3
 
 llm:
   #provider: gemini
@@ -44,6 +44,7 @@ llm:
   provider: claude
   model: claude-sonnet-4-6
   temperature: 0
+  
 
 deepeval_judgellm:
   #provider: gemini
@@ -52,3 +53,6 @@ deepeval_judgellm:
   provider: claude
   model: claude-sonnet-4-6
   temperature: 0
+  #provider: groq
+  #model: llama-3.1-8b-instant
+  #temperature: 0

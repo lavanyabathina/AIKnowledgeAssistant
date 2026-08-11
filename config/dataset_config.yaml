@@ -3,6 +3,14 @@ datasets:
     type: web
     path: https://docs.oracle.com/en/java/javase/25/docs/api/
   
+  - name: selenium
+    type: web
+    path: https://www.selenium.dev/documentation/
+
+  - name: playwright
+    type: web
+    path: https://playwright.dev/docs/intro
+  
   - name: python
     type: local
     path: ./localData/pythondocs

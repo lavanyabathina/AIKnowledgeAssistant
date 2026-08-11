@@ -24,16 +24,16 @@ class ChatSession :
         embedding_model
         )
 
-        self.llm=get_llm(app_config)
+        llm=get_llm(app_config)
         self.rag_chain = (
         chat_prompt
-        | self.llm
+        | llm
         | StrOutputParser()
         )
 
     def ask(self,question:str):
         
-        answer=ask_question(self.app_config,self.retriever,question,self.chat_history,self.rag_chain,self.llm)
+        answer=ask_question(self.app_config,self.retriever,question,self.chat_history,self.rag_chain)
         self.chat_history.append(HumanMessage(content=question))
         self.chat_history.append(AIMessage(content=answer))
         return answer
@@ -46,17 +46,15 @@ if __name__ == "__main__":
     application_config = load_config('config/application_config.yaml');
 
     session = ChatSession(application_config)
-    question1="What is Class in java?"
-    print("Question is:" , question1)
-    answer1 = session.ask(question1)
+
+    answer1 = session.ask("What is Class in java?")
     print("Answer is:",answer1)
-    question2="How do I create an object from it?"
-    print("Question is:" , question2)
-    answer2 = session.ask(question2)
+    answer2 = session.ask("Give me an example.")
     print("Answer is:",answer2)
-    question3="What is the difference between StringBuffer and String?"
-    answer3 = session.ask(question3)
+
+    answer3 = session.ask("What is the difference between StringBuffer and String?")
     print("Answer is:",answer3)
-  
+    print("*********************************************************")
+    print("Chat History is:" , session.chat_history)
 
    
