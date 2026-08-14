@@ -28,19 +28,19 @@ else:
     print(f"{judge_model} is not yet supported as judge model in this application")
 
 
-question1="What is String in Java?"
+question1="What are common operations supported by Java's String class?"
 retrieval_context1= invoke_retriever_to_get_context_pagecontent_list(application_config,question1)
 #Here retrieval_context is a list
 actual_output1=session.ask(question1)
 print("Actual output1 is:" ,actual_output1 )
 print("*****************************************************")
-question2="What is the difference between String and StringBuffer?"
+question2="What are the differences between String and StringBuffer in Java?"
 retrieval_context2= invoke_retriever_to_get_context_pagecontent_list(application_config,question2)
 actual_output2=session.ask(question2)
 print("Actual output2 is:" ,actual_output2 )
 print("*****************************************************")
 
-question3="How to create HashMap?"
+question3="How do I create and populate a Java HashMap with key-value pairs?"
 retrieval_context3= invoke_retriever_to_get_context_pagecontent_list(application_config,question3)
 
 actual_output3=session.ask(question3)

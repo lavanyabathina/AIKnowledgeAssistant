@@ -1,0 +1,572 @@
+Running evaluation/answerRelevancyMetric_test.py ...
+Answer Relevancy Metric Testcase
+Getting retriever.
+Getting Chroma Retriever
+Getting llm:
+llm provider: groq
+model: llama-3.3-70b-versatile
+temperature:0
+get groq llm
+Question is: What is the Java `Class` object used for?
+
+============================================================
+============================================================
+
+Actual output1 is: The information is not available in the provided documentation.
+******************************************
+Question is: When should I use StringBuilder or StringBuffer instead of String in Java?
+
+============================================================
+============================================================
+
+Actual output2 is: The information is not available in the provided documentation to directly answer when to use StringBuilder or StringBuffer instead of String. However, it can be inferred that StringBuilder and StringBuffer are mutable sequences of characters, whereas String is not explicitly described as such in the provided context.
+******************************************
+Question is: Which looping constructs are available in Python and when is each appropriate (for, while, list comprehensions)?
+
+============================================================
+============================================================
+
+Actual output3 is: In Python, the available looping constructs are: 
+1. for loop: Iterate over an iterable. It is appropriate when you need to iterate over a sequence (such as a list, tuple, or string) and perform some action on each item.
+2. while loop: Repeat while a condition is True. It is appropriate when you need to repeat a block of code as long as a certain condition is met.
+3. List comprehension: A compact way to create lists. It is appropriate when you need to create a new list by performing some operation on each item in an existing list or other iterable.
+
+Additionally, other looping constructs mentioned include:
+- range(): used to generate a sequence of numbers for iteration.
+- break: used to exit a loop immediately.
+- continue: used to skip the current iteration.
+- pass: a placeholder statement.
+- else with loops: executes only if the loop ends without a break.
+- Nested loops: used to loop inside another loop.
+- enumerate(): used to iterate with an index.
+- zip(): used to iterate over multiple iterables.
+******************************************
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using llama-3.1-8b-instant, strict=False, async_mode=True)...
+
+
+╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ 🚀 DeepEval Evaluation Results                                                                                                                                                                                                            │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ test_case_0 (Passed 1 metrics)                                                                                                                                                                                                         │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                                           │
+│  ❌ test_case_1                                                                                                                                                                                                                           │
+│  ├──   Input:            When should I use StringBuilder or StringBuffer instead of String in Java?                                                                                                                                       │
+│  │     Actual Output:    The information is not available in the provided documentation to directly answer when to use StringBuilder or StringBuffer instead of String. However, it can be inferred that StringBuilder and                │
+│  │                       StringBuffer are mutable sequences of characters, whereas String is not explicitly described as such in the provided context.                                                                                    │
+│  └── Metrics                                                                                                                                                                                                                              │
+│       Status ┃ Metric           ┃ Score ┃ Threshold ┃ Reason                                                                                                                                                                              │
+│      ━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  │
+│        FAIL  │ Answer Relevancy │ 0.40  │ 0.60      │ The score is 0.40 because the model provided information that is not directly relevant to the question, such as the unavailability of information in the documentation and the      │
+│              │                  │       │           │ lack of explicit description of String, which detracts from the overall relevance of the answer.                                                                                    │
+│                                                                                                                                                                                                                                           │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                                           │
+│  ❌ test_case_2                                                                                                                                                                                                                           │
+│  ├──   Input:            Which looping constructs are available in Python and when is each appropriate (for, while, list comprehensions)?                                                                                                 │
+│  │     Actual Output:    In Python, the available looping constructs are:                                                                                                                                                                 │
+│  │                       1. for loop: Iterate over an iterable. It is appropriate when you need to iterate over a sequence (such as a list, tuple, or string) and perform some action on each item.                                       │
+│  │                       2. while loop: Repeat while a condition is True. It is appropriate when you need to repeat a block of code as long as a certain condition is met.                                                                │
+│  │                       3. List comprehension: A compact way to create lists. It is appropriate when you need to create a new list by performing some operation on each item in an existing list or other iterable.                      │
+│  │                                                                                                                                                                                                                                        │
+│  │                       Additionally, other looping constructs mentioned include:                                                                                                                                                        │
+│  │                       - range(): used to generate a sequence of numbers for iteration.                                                                                                                                                 │
+│  │                       - break: used to exit a loop immediately.                                                                                                                                                                        │
+│  │                       - continue: used to skip the current iteration.                                                                                                                                                                  │
+│  │                       - pass: a placeholder statement.                                                                                                                                                                                 │
+│  │                       - else with loops: executes only if the loop ends without a break.                                                                                                                                               │
+│  │                       - Nested loops: used to loop inside another loop.                                                                                                                                                                │
+│  │                       - enumerate(): used to iterate with an index.                                                                                                                                                                    │
+│  │                       - zip(): used to iterate over multiple iterables.                                                                                                                                                                │
+│  └── Metrics                                                                                                                                                                                                                              │
+│       Status ┃ Metric           ┃ Score ┃ Threshold ┃ Reason                                                                                                                                                                              │
+│      ━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  │
+│        FAIL  │ Answer Relevancy │ 0.36  │ 0.60      │ The score is 0.36 because the actual output contains multiple irrelevant statements about looping constructs in Python, which are not relevant to the question about for, while,    │
+│              │                  │       │           │ and list comprehensions.                                                                                                                                                            │
+│                                                                                                                                                                                                                                           │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Aggregate Metrics                                                                                                                                                                                                                         │
+│                                                                                                                                                                                                                                           │
+│  Metric                                                     ┃ Average Score                                    ┃ Pass Rate                                                                                        ┃ Total                 │
+│ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━ │
+│  Answer Relevancy                                           │ 0.47                                             │ 33.33% | passed=1 | failed=2                                                                     │ 3                     │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
+⚠ WARNING: No hyperparameters logged.
+» Log hyperparameters to attribute prompts and models to your test runs.
+
+================================================================================
+✓ Done 🎉! View results on https://app.confident-ai.com/project/cmshkk7xs0014mx0vk62q7i0x/test-runs/cmssjjkki0038qq0vchd2imwb/regression-testing
+Running evaluation/contextualPrecisionAndRecallMetrics_test.py ...
+Answer Relevancy Metric Testcase
+Getting retriever.
+Getting Chroma Retriever
+Getting llm:
+llm provider: groq
+model: llama-3.3-70b-versatile
+temperature:0
+get groq llm
+Question is: What is HashMap in Java and what are its key methods?
+
+============================================================
+============================================================
+
+Started Retriever.
+Getting retriever.
+Getting Chroma Retriever
+Question is: What are the different ways to create threads in Java and what are the priority levels?
+
+============================================================
+============================================================
+
+Started Retriever.
+Getting retriever.
+Getting Chroma Retriever
+Question is: What are loops in Python and how are they used?
+
+============================================================
+============================================================
+
+Started Retriever.
+Getting retriever.
+Getting Chroma Retriever
+✨ You're running DeepEval's latest Contextual Precision Metric! (using llama-3.1-8b-instant, strict=False, async_mode=True)...
+✨ You're running DeepEval's latest Contextual Recall Metric! (using llama-3.1-8b-instant, strict=False, async_mode=True)...
+Evaluating 3 test case(s) in parallel ━━━━━━━━━━━━━━━━━━━━                                          33% 0:00:02
+    🎯 Evaluating test case #0        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━                                50% 0:00:02
+    🎯 Evaluating test case #1                                                                       0% 0:00:02
+    🎯 Evaluating test case #2                                                                       0% 0:00:02
+Running evaluation/conversationCompletenessMetric_test.py ...
+Getting retriever.
+Getting Chroma Retriever
+Getting llm:
+llm provider: groq
+model: llama-3.3-70b-versatile
+temperature:0
+get groq llm
+Question is: What is a Java class loader and what role does it play at runtime?
+
+============================================================
+============================================================
+
+Actual output1 is: A Java class loader is an object responsible for loading classes. It plays a crucial role at runtime by creating a new class loader using a specified parent class loader for delegation, allowing classes to be loaded and made available for use.
+*****************************************************
+Question is: How can I create an object from a Java class at runtime (basic instantiation)?
+
+============================================================
+Rewritten Question: How can I create an object from a Java class at runtime using the class loader that loads classes, allowing for basic instantiation?
+============================================================
+
+Actual output2 is: The information is not available in the provided documentation.
+*****************************************************
+Question is: How do I define a Python function that returns multiple values?
+
+============================================================
+============================================================
+
+Actual output3 is: The information is not available in the provided documentation.
+*****************************************************
+✨ You're running DeepEval's latest Conversation Completeness Metric! (using llama-3.1-8b-instant, strict=False, async_mode=True)...
+
+
+╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ 🚀 DeepEval Evaluation Results                                                                                                                                                                                                            │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                                           │
+│  ❌ conversational_test_case_0                                                                                                                                                                                                            │
+│  ├── Conversation Turns                                                                                                                                                                                                                   │
+│  │   ├── User: What is a Java class loader and what role does it play at runtime?                                                                                                                                                         │
+│  │   ├── Assistant: A Java class loader is an object responsible for loading classes. It plays a crucial role at runtime by creating a new class loader using a specified parent class loader for delegation, allowing classes to be      │
+│  │   │   loaded and made available for use.                                                                                                                                                                                               │
+│  │   ├── User: How can I create an object from a Java class at runtime (basic instantiation)?                                                                                                                                             │
+│  │   ├── Assistant: The information is not available in the provided documentation.                                                                                                                                                       │
+│  │   ├── User: How do I define a Python function that returns multiple values?                                                                                                                                                            │
+│  │   └── Assistant: The information is not available in the provided documentation.                                                                                                                                                       │
+│  └── Metrics                                                                                                                                                                                                                              │
+│       Status ┃ Metric                    ┃ Score ┃ Threshold ┃ Reason                                                                                                                                                                     │
+│      ━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  │
+│        FAIL  │ Conversation Completeness │ 0.33  │ 0.50      │ The score is 0.3333333333333333 because the LLM successfully met the user's intent to know about Java class loader, but failed to provide relevant answers to the user's   │
+│              │                           │       │           │ questions on how to create an object from a Java class at runtime and how to define a Python function that returns multiple values, citing lack of information in the      │
+│              │                           │       │           │ provided documentation for two consecutive questions.                                                                                                                      │
+│                                                                                                                                                                                                                                           │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Aggregate Metrics                                                                                                                                                                                                                         │
+│                                                                                                                                                                                                                                           │
+│  Metric                                                                         ┃ Average Score                               ┃ Pass Rate                                                                           ┃ Total               │
+│ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━ │
+│  Conversation Completeness                                                      │ 0.33                                        │ 0.00% | passed=0 | failed=1                                                         │ 1                   │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
+⚠ WARNING: No hyperparameters logged.
+» Log hyperparameters to attribute prompts and models to your test runs.
+
+================================================================================
+✓ Done 🎉! View results on https://app.confident-ai.com/project/cmshkk7xs0014mx0vk62q7i0x/test-runs/cmssjl1f4003lpg0vyazchj2y/regression-testing
+Running evaluation/faithfulnessMetric_test.py ...
+Failthfulmess metric Testing
+Getting retriever.
+Getting Chroma Retriever
+Getting llm:
+llm provider: groq
+model: llama-3.3-70b-versatile
+temperature:0
+get groq llm
+Question is: What is the syntax to create a list in Python?
+
+============================================================
+============================================================
+
+Actual output1 is: The information about the general syntax to create a list is not explicitly provided, but an example of list creation using list comprehension is given: 
+
+newList = [2*num for num in numList]
+
+Additionally, examples of lists are provided: 
+[1, 2, 3, 4], [’yes’, ’no’, ’maybe’] 
+
+However, the general syntax for creating a list is not explicitly stated in the provided context.
+*****************************************************
+Started Retriever.
+Getting retriever.
+Getting Chroma Retriever
+retrieval context1 is: ['so you may not guess Python’s order, but see if you can get the right length and the right elements insome\norder.)\nset([’animal’, ’food’, ’animal’, ’food’, ’food’, ’city’])\n2.2.3. Constructors. We have now seen several examples of the name of a type being used as a\nfunction. Read these earlier examples:\nx = int(’123’)\ns = str(123)\n4There is also a concise syntax calledlist comprehensionthat allows you to derive a new list from a given sequence. In\nthe example above, we could describe what happens in English as “make newList contain twice each number in numList”. This\nis quite directly translated into an assignment with a list comprehension:\nnewList = [2*num for num in numList]\nThis is a lot like mathematical set deﬁnition notation, except without Greek symbols. List comprehensions also have fancier\noptions, but they are not covered in this tutorial.', 'so you may not guess Python’s order, but see if you can get the right length and the right elements insome\norder.)\nset([’animal’, ’food’, ’animal’, ’food’, ’food’, ’city’])\n2.2.3. Constructors. We have now seen several examples of the name of a type being used as a\nfunction. Read these earlier examples:\nx = int(’123’)\ns = str(123)\n4There is also a concise syntax calledlist comprehensionthat allows you to derive a new list from a given sequence. In\nthe example above, we could describe what happens in English as “make newList contain twice each number in numList”. This\nis quite directly translated into an assignment with a list comprehension:\nnewList = [2*num for num in numList]\nThis is a lot like mathematical set deﬁnition notation, except without Greek symbols. List comprehensions also have fancier\noptions, but they are not covered in this tutorial.', 'Numbers: 3, 6, -7, 1.25\nCharacter strings: ’hello’, ’The answer is: ’\nLists of objects of any type:[1, 2, 3, 4], [’yes’, ’no’, ’maybe’]\nA special datum meaning nothing:None\nPython has large collection of built-in functions that operate on diﬀerent kinds of data to produce all kinds\nof results. To make a function do its action, parentheses are required. These parentheses surround the\nparameter or parameters, as in a function in algebra class.\nThe general syntax to execute a function is\nfunctionName ( parameters )\nOne function is calledtype, and it returns the type of any object. The Python Shell will evaluate functions.\nIn the Shell the last line should look like\n>\u200c>\u200c>\nContinuing on the same line enter']
+*****************************************************
+Question is: What is a class in Python and how do I define one?
+
+============================================================
+============================================================
+
+Actual output2 is: The information is not available in the provided documentation. However, it is mentioned that "(1) Creating your own kinds of objects (writing classes)" is a topic to learn about programming and Python, but the details are not provided.
+*****************************************************
+Started Retriever.
+Getting retriever.
+Getting Chroma Retriever
+retrieval context2 is: ['learn about programming and Python in particular, if you continue in other places:\n(1) Creating your own kinds of objects (writing classes)\n(2) Inheritance: Building new classes derived from existing classes\n(3) Python list indexing and slicing, both to read and change parts of lists\n(4) Other syntax used with loops:break, continue, andelse\n(5) Exception handling\n(6) Python’s variable length parameter lists, and other options in parameter lists\n(7) List comprehensions: a concise, readable, fast Pythonic way to make new lists from old ones\n(8) Event handling in graphical programming\n(9) Recursion (not special to Python): a powerful programming technique where functions call them-\nselves', 'learn about programming and Python in particular, if you continue in other places:\n(1) Creating your own kinds of objects (writing classes)\n(2) Inheritance: Building new classes derived from existing classes\n(3) Python list indexing and slicing, both to read and change parts of lists\n(4) Other syntax used with loops:break, continue, andelse\n(5) Exception handling\n(6) Python’s variable length parameter lists, and other options in parameter lists\n(7) List comprehensions: a concise, readable, fast Pythonic way to make new lists from old ones\n(8) Event handling in graphical programming\n(9) Recursion (not special to Python): a powerful programming technique where functions call them-\nselves', 'Numbers: 3, 6, -7, 1.25\nCharacter strings: ’hello’, ’The answer is: ’\nLists of objects of any type:[1, 2, 3, 4], [’yes’, ’no’, ’maybe’]\nA special datum meaning nothing:None\nPython has large collection of built-in functions that operate on diﬀerent kinds of data to produce all kinds\nof results. To make a function do its action, parentheses are required. These parentheses surround the\nparameter or parameters, as in a function in algebra class.\nThe general syntax to execute a function is\nfunctionName ( parameters )\nOne function is calledtype, and it returns the type of any object. The Python Shell will evaluate functions.\nIn the Shell the last line should look like\n>\u200c>\u200c>\nContinuing on the same line enter']
+*****************************************************
+✨ You're running DeepEval's latest Faithfulness Metric! (using llama-3.1-8b-instant, strict=False, async_mode=True)...
+Evaluating 2 test case(s) in parallel ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━                                50% 0:00:10
+    🎯 Evaluating test case #0                                                                       0% 0:00:10
+    🎯 Evaluating test case #1                                                                       0% 0:00:10
+Running evaluation/goalAccuracyMetric_test.py ...
+Getting retriever.
+Getting Chroma Retriever
+Getting llm:
+llm provider: groq
+model: llama-3.3-70b-versatile
+temperature:0
+get groq llm
+Question is: What is a Java interface and when should I use it?
+
+============================================================
+============================================================
+
+Actual output1 is: The information is not available in the provided documentation.
+*****************************************************
+Question is: How do I create an instance of a Java class using a constructor?
+
+============================================================
+============================================================
+
+Actual output2 is: The information is not available in the provided documentation to fully answer your question, but it does mention that an InstantiationError is thrown when an application tries to use the Java `new` construct to instantiate an abstract class or an interface, and an InstantiationException is thrown when an application tries to create an instance of a class using the `newInstance` method in class `Class`, but the specified class object cannot be instantiated. Additionally, it mentions the `newInstance` method in class `java.lang.reflect.Constructor` which uses the constructor represented by this `Constructor` object to create and initialize a new instance of the constructor's declaring class.
+*****************************************************
+Question is: In Python, how do I define a function that accepts variable keyword arguments (kwargs)?
+
+============================================================
+============================================================
+
+Actual output3 is: The information is not available in the provided documentation to fully answer your question, but it does show an example of a function definition with a parameter, such as "def f(x):". However, it does not provide information on how to define a function that accepts variable keyword arguments (kwargs).
+*****************************************************
+✨ You're running DeepEval's latest Goal Accuracy Metric! (using llama-3.1-8b-instant, strict=False, async_mode=True)...
+    🎯 Evaluating test case #0                                                                0% 0:00:28
+Running evaluation/knowledgeRetentionMetric_test.py ...
+Getting retriever.
+Getting Chroma Retriever
+Getting llm:
+llm provider: groq
+model: llama-3.3-70b-versatile
+temperature:0
+get groq llm
+Question is: Explain Java access modifiers (public, protected, private) and their visibility rules.
+
+============================================================
+============================================================
+
+Actual output1 is: The information is not available in the provided documentation.
+*****************************************************
+Question is: Show how to instantiate an object in Java and call one of its methods.
+
+============================================================
+============================================================
+
+Actual output2 is: The information is not available in the provided documentation.
+*****************************************************
+Question is: How can I document a Python function using a docstring?
+
+============================================================
+============================================================
+
+Actual output3 is: The information is not available in the provided documentation.
+*****************************************************
+✨ You're running DeepEval's latest Knowledge Retention Metric! (using llama-3.1-8b-instant, strict=False, async_mode=True)...
+
+
+╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ 🚀 DeepEval Evaluation Results                                                                                                                                                                                                            │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ✅ conversational_test_case_0 (Passed 1 metrics)                                                                                                                                                                                          │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Aggregate Metrics                                                                                                                                                                                                                         │
+│                                                                                                                                                                                                                                           │
+│  Metric                                                           ┃ Average Score                                 ┃ Pass Rate                                                                                      ┃ Total                │
+│ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━ │
+│  Knowledge Retention                                              │ 0.67                                          │ 100.00% | passed=1 | failed=0                                                                  │ 1                    │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
+⚠ WARNING: No hyperparameters logged.
+» Log hyperparameters to attribute prompts and models to your test runs.
+
+================================================================================
+✓ Done 🎉! View results on https://app.confident-ai.com/project/cmshkk7xs0014mx0vk62q7i0x/test-runs/cmssjnhem003qs70v5zyniyau/regression-testing
+Running evaluation/roleAdherenceMetric_test.py ...
+Getting retriever.
+Getting Chroma Retriever
+Getting llm:
+llm provider: groq
+model: llama-3.3-70b-versatile
+temperature:0
+get groq llm
+Question is: What is inheritance in Java and how is it declared?
+
+============================================================
+============================================================
+
+Actual output1 is: The information is not available in the provided documentation.
+*****************************************************
+Question is: How do I instantiate a subclass object in Java?
+
+============================================================
+Rewritten Question: How do I instantiate a subclass object in Java, considering the concept of inheritance that was previously discussed?
+============================================================
+
+Actual output2 is: The information is not available in the provided documentation.
+*****************************************************
+Question is: How do I create a generator function in Python?
+
+============================================================
+============================================================
+
+Actual output3 is: The information is not available in the provided documentation. However, the retrieved context does mention the range function, which generates a sequence of numbers, and it can be used to create a list of numbers. For example: list(range(4)) or list(range(10)).
+*****************************************************
+✨ You're running DeepEval's latest Role Adherence Metric! (using llama-3.1-8b-instant, strict=False, async_mode=True)...
+
+
+╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ 🚀 DeepEval Evaluation Results                                                                                                                                                                                                            │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                                           │
+│  ❌ conversational_test_case_0                                                                                                                                                                                                            │
+│  ├── Conversation Turns                                                                                                                                                                                                                   │
+│  │   ├── User: What is inheritance in Java and how is it declared?                                                                                                                                                                        │
+│  │   ├── Assistant: The information is not available in the provided documentation.                                                                                                                                                       │
+│  │   ├── User: How do I instantiate a subclass object in Java?                                                                                                                                                                            │
+│  │   ├── Assistant: The information is not available in the provided documentation.                                                                                                                                                       │
+│  │   ├── User: How do I create a generator function in Python?                                                                                                                                                                            │
+│  │   └── Assistant: The information is not available in the provided documentation. However, the retrieved context does mention the range function, which generates a sequence of numbers, and it can be used to create a list of         │
+│  │       numbers. For example: list(range(4)) or list(range(10)).                                                                                                                                                                         │
+│  └── Metrics                                                                                                                                                                                                                              │
+│       Status ┃ Metric         ┃ Score ┃ Threshold ┃ Reason                                                                                                                                                                                │
+│      ━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  │
+│        FAIL  │ Role Adherence │ 0.33  │ 0.50      │ The score is 0.3333333333333333 because the LLM chatbot responses have deviated from the role of an AI Knowledge Assistant in several instances. Specifically, the responses 'The     │
+│              │                │       │           │ information is not available in the provided documentation.' (turn #2) and 'The information is not available in the provided documentation.' (turn #4) indicate that the LLM          │
+│              │                │       │           │ chatbot is using its own general knowledge to answer the question, which is against rule 3. Additionally, the responses do not adhere to rule 6, which requires answering the         │
+│              │                │       │           │ user's question directly. Furthermore, the responses do not follow rule 5, which states that if the answer is not present in the retrieved context, the LLM chatbot should say 'The   │
+│              │                │       │           │ information is not available in the provided documentation.' without using its own general knowledge.                                                                                 │
+│                                                                                                                                                                                                                                           │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Aggregate Metrics                                                                                                                                                                                                                         │
+│                                                                                                                                                                                                                                           │
+│  Metric                                                ┃ Average Score                                      ┃ Pass Rate                                                                                          ┃ Total                  │
+│ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━ │
+│  Role Adherence                                        │ 0.33                                               │ 0.00% | passed=0 | failed=1                                                                        │ 1                      │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
+⚠ WARNING: No hyperparameters logged.
+» Log hyperparameters to attribute prompts and models to your test runs.
+
+================================================================================
+✓ Done 🎉! View results on https://app.confident-ai.com/project/cmshkk7xs0014mx0vk62q7i0x/test-runs/cmssjnvkc0034ny0vm3gze3bp/regression-testing
+Running evaluation/topicAdherenceMetric_test.py ...
+Getting retriever.
+Getting Chroma Retriever
+Getting llm:
+llm provider: groq
+model: llama-3.3-70b-versatile
+temperature:0
+get groq llm
+Question is: What is the Page Object Model in Selenium and why is it useful?
+
+============================================================
+============================================================
+
+Actual output1 is: The information is not available in the provided documentation.
+*****************************************************
+Question is: How do I create a browser context and a new page in Playwright?
+
+============================================================
+============================================================
+
+Actual output2 is: To create a browser context and a new page in Playwright, you can use the following methods:
+
+1. Create a new browser context using `browser.NewContextAsync()` or `browser.newContext()`.
+2. Create a new page inside the context using `context.NewPageAsync()` or `context.newPage()`.
+
+Example (C#):
+```
+var context = await browser.NewContextAsync();
+var page = await context.NewPageAsync();
+```
+
+Example (JavaScript):
+```
+const context = await browser.newContext();
+const page = await context.newPage();
+```
+*****************************************************
+Question is: In Python, how do I open and read a text file safely using a context manager?
+
+============================================================
+============================================================
+
+Actual output3 is: The information is not available in the provided documentation.
+*****************************************************
+✨ You're running DeepEval's latest Topic Adherence Metric! (using llama-3.1-8b-instant, strict=False, async_mode=True)...
+    🎯 Evaluating test case #0                                                                0% 0:00:00
+Running evaluation/turnFailthfulnessMetric_test.py ...
+Getting retriever.
+Getting Chroma Retriever
+Getting llm:
+llm provider: groq
+model: llama-3.3-70b-versatile
+temperature:0
+get groq llm
+Started Retriever.
+Getting retriever.
+Getting Chroma Retriever
+Question is: What are common operations supported by Java's String class?
+
+============================================================
+============================================================
+
+Actual output1 is: The information is not available in the provided documentation.
+*****************************************************
+Started Retriever.
+Getting retriever.
+Getting Chroma Retriever
+Question is: What are the differences between String and StringBuffer in Java?
+
+============================================================
+Rewritten Question: What are the differences between Java's String class, which we previously discussed in terms of common operations, and StringBuffer in Java?
+============================================================
+
+Actual output2 is: The information is not available in the provided documentation.
+*****************************************************
+Started Retriever.
+Getting retriever.
+Getting Chroma Retriever
+Question is: How do I create and populate a Java HashMap with key-value pairs?
+
+============================================================
+============================================================
+
+Actual output3 is: You can create a `HashMap` with an initial capacity using the `new HashMap()` constructor or by passing a `Map` to the `HashMap` constructor. 
+
+To create an empty `HashMap` with the default initial capacity, use `new HashMap()`. 
+
+To create a `HashMap` with the same mappings as a specified `Map`, use `new HashMap(Map<? extends K, ? extends V> m)`. 
+
+The provided documentation does not specify how to populate a `HashMap` with key-value pairs after creation.
+*****************************************************
+✨ You're running DeepEval's latest Turn Faithfulness Metric! (using llama-3.1-8b-instant, strict=False, async_mode=True)...
+    🎯 Evaluating test case #0                                                                0% 0:00:00
+Running evaluation/turnRelevancyMetric_test.py ...
+Getting retriever.
+Getting Chroma Retriever
+Getting llm:
+llm provider: groq
+model: llama-3.3-70b-versatile
+temperature:0
+get groq llm
+Question is: What is the purpose of java.lang.String in Java?
+
+============================================================
+============================================================
+
+Actual output1 is: The information is not available in the provided documentation.
+*****************************************************
+Question is: How do I create an object of a custom Java class using its constructor?
+
+============================================================
+============================================================
+
+Actual output2 is: The information is not available in the provided documentation.
+*****************************************************
+Question is: What are the differences between String and StringBuffer in Java and when should each be used?
+
+============================================================
+Rewritten Question: What are the differences between java.lang.String and StringBuffer in Java, considering I'm working with custom Java classes and their constructors, and when should each be used?
+============================================================
+
+Actual output3 is: The information is not available in the provided documentation to fully answer the differences between String and StringBuffer. However, it can be seen that StringBuffer has multiple constructors to initialize it, and it is a mutable sequence of characters, similar to StringBuilder.
+*****************************************************
+✨ You're running DeepEval's latest Turn Relevancy Metric! (using llama-3.1-8b-instant, strict=False, async_mode=True)...
+
+
+╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ 🚀 DeepEval Evaluation Results                                                                                                                                                                                                            │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                                           │
+│  ❌ conversational_test_case_0                                                                                                                                                                                                            │
+│  ├── Conversation Turns                                                                                                                                                                                                                   │
+│  │   ├── User: What is the purpose of java.lang.String in Java?                                                                                                                                                                           │
+│  │   ├── Assistant: The information is not available in the provided documentation.                                                                                                                                                       │
+│  │   ├── User: How do I create an object of a custom Java class using its constructor?                                                                                                                                                    │
+│  │   ├── Assistant: The information is not available in the provided documentation.                                                                                                                                                       │
+│  │   ├── User: What are the differences between String and StringBuffer in Java and when should each be used?                                                                                                                             │
+│  │   └── Assistant: The information is not available in the provided documentation to fully answer the differences between String and StringBuffer. However, it can be seen that StringBuffer has multiple constructors to initialize     │
+│  │       it, and it is a mutable sequence of characters, similar to StringBuilder.                                                                                                                                                        │
+│  └── Metrics                                                                                                                                                                                                                              │
+│       Status ┃ Metric         ┃ Score ┃ Threshold ┃ Reason                                                                                                                                                                                │
+│      ━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  │
+│        FAIL  │ Turn Relevancy │ 0.00  │ 0.50      │ The score is 0.0 because the LLM responded with irrelevant information to specific and relevant questions, such as 'The information is not available in the provided documentation'   │
+│              │                │       │           │ to a message about the purpose of java.lang.String in Java (#1) and how to create an object of a custom Java class (#2), and also failed to provide a full answer to a partially      │
+│              │                │       │           │ relevant question about the differences between String and StringBuffer (#3).                                                                                                         │
+│                                                                                                                                                                                                                                           │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Aggregate Metrics                                                                                                                                                                                                                         │
+│                                                                                                                                                                                                                                           │
+│  Metric                                                ┃ Average Score                                      ┃ Pass Rate                                                                                          ┃ Total                  │
+│ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━ │
+│  Turn Relevancy                                        │ 0.00                                               │ 0.00% | passed=0 | failed=1                                                                        │ 1                      │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
+⚠ WARNING: No hyperparameters logged.
+» Log hyperparameters to attribute prompts and models to your test runs.
+
+================================================================================
+✓ Done 🎉! View results on https://app.confident-ai.com/project/cmshkk7xs0014mx0vk62q7i0x/test-runs/cmssjpqz0003bpe0v7xnw4wq9/regression-testing

@@ -33,7 +33,7 @@ metric = FaithfulnessMetric(
     model=modelObj,
     include_reason=True
 )
-question1="what is the syntx to create list in python?"
+question1="What is the syntax to create a list in Python?"
 actual_output1=session.ask(question1)
 print("Actual output1 is:" ,actual_output1 )
 print("*****************************************************")
@@ -41,7 +41,7 @@ retrieval_context1= invoke_retriever_to_get_context_pagecontent_list(application
 print("retrieval context1 is:" , retrieval_context1 )
 print("*****************************************************")
 
-question2="what is class in python?"
+question2="What is a class in Python and how do I define one?"
 actual_output2=session.ask(question2)
 print("Actual output2 is:" ,actual_output2 )
 print("*****************************************************")

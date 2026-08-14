@@ -1,4 +1,6 @@
 from loaders.webdocument_generator import create_dataset_from_web
+from loaders.localdocument_generator import create_dataset_from_local
+
 async def generate_dataset(dataset_config):
     datasets = dataset_config["datasets"]
     for dataset in datasets:
@@ -9,4 +11,4 @@ async def generate_dataset(dataset_config):
         elif dataset["type"] == "local":
             print("Source is from local");
             print("Dataset is present in local source by default")
-           # create_dataset_from_local (dataset["path"])
+            await create_dataset_from_local (dataset["path"])

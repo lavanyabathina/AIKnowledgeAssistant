@@ -6,15 +6,15 @@ application:
 
   # Generate dataset from configured sources
   dataset_generation:
-    enabled: false
+    enabled: true
 
   # Delete existing vector database before indexing
   rebuild_vector_db:
-    enabled: false
+    enabled: true
 
   # Create embeddings and store in vector database  
   vector_indexing:
-    enabled: false
+    enabled: true
 
   # Query vector database using LLM
   chat:
@@ -41,8 +41,8 @@ llm:
   #provider: gemini
   #model: gemini-3.6-flash
   #temperature: 0
-  provider: claude
-  model: claude-sonnet-4-6
+  provider: groq
+  model: llama-3.3-70b-versatile
   temperature: 0
   
 
@@ -50,9 +50,9 @@ deepeval_judgellm:
   #provider: gemini
   #model: gemini-3.6-flash
   #temperature: 0
-  provider: claude
-  model: claude-sonnet-4-6
-  temperature: 0
-  #provider: groq
-  #model: llama-3.1-8b-instant
+  #provider: claude
+  #model: claude-sonnet-4-6
   #temperature: 0
+  provider: groq
+  model: llama-3.1-8b-instant
+  temperature: 0

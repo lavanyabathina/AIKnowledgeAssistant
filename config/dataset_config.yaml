@@ -2,6 +2,10 @@ datasets:
   - name: java
     type: web
     path: https://docs.oracle.com/en/java/javase/25/docs/api/
+
+  - name: python
+    type: local
+    path: ./sources/local/pythondocs
   
   - name: selenium
     type: web
@@ -11,9 +15,6 @@ datasets:
     type: web
     path: https://playwright.dev/docs/intro
   
-  - name: python
-    type: local
-    path: ./localData/pythondocs
 
 source_directory: ./sources
 

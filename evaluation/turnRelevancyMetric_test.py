@@ -28,16 +28,16 @@ else:
     print(f"{judge_model} is not yet supported as judge model in this application")
 
 
-question1="What is Class in java?"
+question1="What is the purpose of java.lang.String in Java?"
 actual_output1=session.ask(question1)
 print("Actual output1 is:" ,actual_output1 )
 print("*****************************************************")
-question2="How do I create an object from it?"
+question2="How do I create an object of a custom Java class using its constructor?"
 actual_output2=session.ask(question2)
 print("Actual output2 is:" ,actual_output2 )
 print("*****************************************************")
 
-question3="What is the difference between StringBuffer and String?"
+question3="What are the differences between String and StringBuffer in Java and when should each be used?"
 actual_output3=session.ask(question3)
 
 print("Actual output3 is:" ,actual_output3 )

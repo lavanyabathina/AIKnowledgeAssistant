@@ -28,16 +28,16 @@ else:
     print(f"{judge_model} is not yet supported as judge model in this application")
 
 
-question1="What is Class in Java?"
+question1="What is inheritance in Java and how is it declared?"
 actual_output1=session.ask(question1)
 print("Actual output1 is:" ,actual_output1 )
 print("*****************************************************")
-question2="How do I create an object from it?"
+question2="How do I instantiate a subclass object in Java?"
 actual_output2=session.ask(question2)
 print("Actual output2 is:" ,actual_output2 )
 print("*****************************************************")
 
-question3="How to create a function in Python?"
+question3="How do I create a generator function in Python?"
 actual_output3=session.ask(question3)
 
 print("Actual output3 is:" ,actual_output3 )

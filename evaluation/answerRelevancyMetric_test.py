@@ -34,16 +34,16 @@ metric = AnswerRelevancyMetric(
     include_reason=True
 )
 
-question1="What is class in Java?"
+question1="What is the Java `Class` object used for?"
 actual_output1=session.ask(question1)
 print("Actual output1 is:" ,actual_output1 )
 print('******************************************')
-question2="What is the difference between String and String Buffer in Java?"
+question2="When should I use StringBuilder or StringBuffer instead of String in Java?"
 actual_output2=session.ask(question2)
 print("Actual output2 is:" ,actual_output2 )
 
 print('******************************************')
-question3="Which are different loops available in Python?"
+question3="Which looping constructs are available in Python and when is each appropriate (for, while, list comprehensions)?"
 actual_output3=session.ask(question3)
 
 
