@@ -1,6 +1,10 @@
 #environment file
 .env
 
+# Backup files
+*.backup
+requirements_original.txt
+
 #chroma_db
 vectorstore/chroma_db
 
@@ -16,7 +20,7 @@ sources/web/selenium
 #Python cache
 __pycache__/
 
-
+.deepeval/
 
 
 
