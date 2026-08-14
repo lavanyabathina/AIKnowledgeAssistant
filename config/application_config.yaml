@@ -35,7 +35,11 @@ vector_db:
   collection: knowledge_base
 
 retrieval:
-  top_k: 3
+  top_k: 5
+  type: hybrid
+  hybrid_candidate_k: 20
+  hybrid_weights: [0.6, 0.4]
+
 
 llm:
   #provider: gemini

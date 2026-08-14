@@ -34,6 +34,3 @@ python-dotenv>=1.1.0 # Required for loading .env file (used in main.py and all e
 # Windows Support for DeepEval cache functionality (latest versions)
 portalocker>=2.8.0
 pywin32>=310
-
-
-

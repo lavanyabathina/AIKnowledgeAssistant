@@ -1,24 +1,24 @@
 datasets:
 
-  - name: selenium
-    type: web
-    path: https://www.selenium.dev/documentation/
-
-  - name: playwright
-    type: web
-    path: https://playwright.dev/docs/intro
-
-  - name: kubernetes
-    type: web
-    path: https://kubernetes.io/docs/home/
-  
-  - name: docker
-    type: web
-    path: https://docs.docker.com/
-
-  - name: elasticsearch
-    type: web
-    path: https://www.elastic.co/guide/
+#  - name: selenium
+#    type: web
+#    path: https://www.selenium.dev/documentation/
+#
+#  - name: playwright
+#    type: web
+#    path: https://playwright.dev/docs/intro
+#
+#  - name: kubernetes
+#    type: web
+#    path: https://kubernetes.io/docs/home/
+#  
+#  - name: docker
+#    type: web
+#    path: https://docs.docker.com/
+#
+#  - name: elasticsearch
+#    type: web
+#    path: https://www.elastic.co/guide/
     
   - name: python
     type: local
