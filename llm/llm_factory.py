@@ -1,7 +1,8 @@
+from llm.groq_llm import *
 
-from llm.gemini_llm import *
+"""from llm.gemini_llm import *
 from llm.openai_llm import *
-from llm.claude_llm import *
+from llm.claude_llm import *"""
 
 def get_llm(application_config):
 
@@ -14,14 +15,17 @@ def get_llm(application_config):
     print(f"model: {model}")
     print(f"temperature:{temperature}")
 
-    if llm_provider == "openai":
-        return get_openai_llm(model,temperature)
-    elif llm_provider == "gemini":
-        return get_gemini_llm(model,temperature)
-    elif llm_provider == "claude":
-        return get_claude_llm(model,temperature)
+    if llm_provider == "groq":
+        return get_groq_llm(model,temperature)
     else:
         print(f"{llm_provider} is not supported")
         return
 
+    """if llm_provider == "openai":
+        return get_openai_llm(model,temperature)
+    elif llm_provider == "gemini":
+        return get_gemini_llm(model,temperature)
+    elif llm_provider == "claude":
+        return get_claude_llm(model,temperature)"""
+    
     

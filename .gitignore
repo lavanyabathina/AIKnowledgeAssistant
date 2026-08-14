@@ -26,3 +26,4 @@ __pycache__/
 
 
 
+chroma_db/chroma.sqlite3

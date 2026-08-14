@@ -22,6 +22,10 @@ def ask_question(application_config , retriever, question, chat_history, rag_cha
     
     # Use rewritten query for retrieval
     docs = retriever.invoke(rewritten_question)
+    #print(f"Number of documents retrieved: {len(docs)}")
+    #print(f"Retrieved docs:")
+    #for i, doc in enumerate(docs):
+    #    print(f"Document {i + 1}: {doc.page_content[:100]}...")
     context = "\n\n".join(
     doc.page_content
     for doc in docs
